@@ -11,8 +11,8 @@ import {
 } from "@shared/schema";
 import { useI18n, getProductPrice } from "@/lib/i18n";
 import { productTypeImages, categoryImages } from "@/lib/product-images";
-import heroLeft from "@assets/hero-left.png";
-import heroRight from "@assets/hero-right.png";
+import heroLeft from "@assets/hero-left.jpg";
+import heroRight from "@assets/hero-right.jpg";
 
 // ─── Editorial quote pairs for between sections ───
 const editorialQuotes = [
