@@ -291,11 +291,8 @@ export interface ProductColor {
 
 export const productColors: ProductColor[] = [
   { id: "dusty_rose", name: "Dusty Rose", hex: "#C9929D" },
-  { id: "sage", name: "Sage", hex: "#9CAF94" },
   { id: "cream", name: "Cream", hex: "#F0EAE0" },
   { id: "taupe", name: "Taupe", hex: "#B4A69A" },
-  { id: "sand", name: "Sand", hex: "#D4C5B2" },
-  { id: "mauve", name: "Mauve", hex: "#C4A0AA" },
 ];
 
 // ─── Cart ───

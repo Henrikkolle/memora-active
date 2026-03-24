@@ -12,7 +12,7 @@ import {
   productColors,
 } from "@shared/schema";
 import { useI18n, getProductPrice } from "@/lib/i18n";
-import { productTypeImages } from "@/lib/product-images";
+import { productTypeImages, productColorImages } from "@/lib/product-images";
 
 export default function Configure() {
   const [, params] = useRoute("/configure/:productType");
@@ -46,7 +46,7 @@ export default function Configure() {
   const size = sizes.find(s => s.id === selectedSize) || sizes[0];
   const color = productColors.find(c => c.id === selectedColor) || productColors[0];
   const { price, formatted: formattedPrice } = getProductPrice(initialProductType);
-  const img = productTypeImages[initialProductType];
+  const img = productColorImages[initialProductType]?.[selectedColor] || productTypeImages[initialProductType];
 
   const handleAddToCart = () => {
     addItem({
