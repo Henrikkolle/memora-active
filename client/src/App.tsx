@@ -15,6 +15,9 @@ import Cart from "@/pages/cart";
 import Checkout from "@/pages/checkout";
 import OrderSuccess from "@/pages/order-success";
 import NotFound from "@/pages/not-found";
+import Terms from "@/pages/terms";
+import Returns from "@/pages/returns";
+import Privacy from "@/pages/privacy";
 
 function AppRouter() {
   return (
@@ -24,6 +27,9 @@ function AppRouter() {
       <Route path="/cart" component={Cart} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/order-success" component={OrderSuccess} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/returns" component={Returns} />
+      <Route path="/privacy" component={Privacy} />
       <Route component={NotFound} />
     </Switch>
   );
