@@ -22,8 +22,8 @@ export default function Terms() {
           <h2 className="text-base font-semibold text-foreground mb-2">1. Virksomhedsoplysninger</h2>
           <p>
             MEM♡RA (herefter &quot;Memora&quot;) drives af:<br />
-            [FIRMAADRESSE]<br />
-            CVR-nr.: [CVR-NUMMER]<br />
+            Christiansholms Tværvej 10, 2930 Klampenborg<br />
+            CVR-nr.: 38723960<br />
             E-mail: info@memora-active.com<br />
             Hjemmeside: memora-active.com
           </p>

@@ -23,8 +23,8 @@ export default function Privacy() {
           <p>
             Den dataansvarlige for behandling af personoplysninger er:<br />
             MEM♡RA<br />
-            [FIRMAADRESSE]<br />
-            CVR-nr.: [CVR-NUMMER]<br />
+            Christiansholms Tværvej 10, 2930 Klampenborg<br />
+            CVR-nr.: 38723960<br />
             E-mail: info@memora-active.com
           </p>
         </section>
