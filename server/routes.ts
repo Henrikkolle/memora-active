@@ -2,8 +2,19 @@ import type { Express } from "express";
 import type { Server } from "http";
 import { sampleQuotes, productTypeData, productTypes } from "../shared/schema";
 import Stripe from "stripe";
+import https from "https";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
+// Force IPv4 to avoid Railway IPv6 connectivity issues with Stripe
+const httpAgent = new https.Agent({
+  family: 4,
+  keepAlive: true,
+});
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
+  httpAgent,
+  timeout: 30000,
+  maxNetworkRetries: 2,
+});
 
 export async function registerRoutes(server: Server, app: Express) {
   // Get all editorial quotes
