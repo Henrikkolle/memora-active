@@ -2,6 +2,10 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import dns from "dns";
+
+// Force DNS to prefer IPv4 — fixes Railway connectivity to Stripe
+dns.setDefaultResultOrder("ipv4first");
 
 const app = express();
 const httpServer = createServer(app);
