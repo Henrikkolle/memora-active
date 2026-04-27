@@ -71,9 +71,17 @@ export async function registerRoutes(server: Server, app: Express) {
         mode: "payment",
         line_items: lineItems,
         shipping_address_collection: {
+          // European-only shipping. We do not ship outside Europe.
           allowed_countries: [
-            "DK", "SE", "NO", "GB", "DE", "NL", "FR", "ES",
-            "FI", "AT", "BE", "IE", "IT", "PT", "PL", "CZ",
+            // Nordic
+            "DK", "SE", "NO", "FI", "IS",
+            // Western Europe
+            "GB", "IE", "DE", "NL", "BE", "LU", "FR", "AT", "CH",
+            // Southern Europe
+            "ES", "PT", "IT", "GR", "MT", "CY",
+            // Central / Eastern Europe (EU)
+            "PL", "CZ", "SK", "HU", "SI", "HR", "RO", "BG",
+            "EE", "LV", "LT",
           ],
         },
         shipping_options: [

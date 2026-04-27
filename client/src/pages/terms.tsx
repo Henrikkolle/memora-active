@@ -58,6 +58,10 @@ export default function Terms() {
             Leveringstiden kan variere afhængigt af destination og uforudsete forsinkelser.
             Du modtager en bekræftelse med tracking-oplysninger, når din ordre er afsendt.
           </p>
+          <p className="mt-2">
+            <strong>Vi leverer kun inden for Europa.</strong> Det inkluderer EU-lande, Storbritannien,
+            Norge, Schweiz og Island. Ordrer fra lande uden for Europa kan ikke gennemføres.
+          </p>
         </section>
 
         {/* 4. Forsendelsesomkostninger */}
