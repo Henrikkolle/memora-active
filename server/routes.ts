@@ -3,9 +3,7 @@ import type { Server } from "http";
 import { sampleQuotes, productTypeData, productTypes } from "../shared/schema";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  apiVersion: "2025-03-31.basil" as any,
-});
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 export async function registerRoutes(server: Server, app: Express) {
   // Get all editorial quotes
@@ -103,8 +101,8 @@ export async function registerRoutes(server: Server, app: Express) {
       const session = await stripe.checkout.sessions.create(sessionParams);
       res.json({ url: session.url });
     } catch (error: any) {
-      console.error("Stripe error:", error.message);
-      res.status(500).json({ error: "Could not create checkout session" });
+      console.error("Stripe error creating session:", error.message, error.type, error.code);
+      res.status(500).json({ error: error.message || "Could not create checkout session" });
     }
   });
 
